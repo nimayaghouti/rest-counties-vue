@@ -15,12 +15,12 @@ export default {
         sans: ['Nunito Sans', 'sans-serif'],
       },
       colors: {
-        'dark-blue': '#1A2631', // Dark Blue (Dark Mode Elements)
-        'dark-blue-bg': '#161E24', // Very Dark Blue (Dark Mode Background)
-        'dark-blue-text': '#1A1A1A', // Very Dark Blue (Light Mode Text)
-        'dark-gray-input': '#7F7F7F', // Dark Gray (Light Mode Input)
-        'light-gray-bg': '#F7F7F7', // Very Light Gray (Light Mode Background)
-        white: '#FFFFFF', // White (Dark Mode Text & Light Mode Elements)
+        'dark-blue': '#2b3743', // Dark Blue (Dark Mode Elements)
+        'dark-blue-bg': '#202d36', // Very Dark Blue (Dark Mode Background)
+        'dark-blue-text': '#111517', // Very Dark Blue (Light Mode Text)
+        'dark-gray-input': '#858585', // Dark Gray (Light Mode Input)
+        'light-gray-bg': '#fafafa', // Very Light Gray (Light Mode Background)
+        white: '#ffffff', // White (Dark Mode Text & Light Mode Elements)
       },
     },
   },
