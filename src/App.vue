@@ -1,5 +1,11 @@
-<script setup></script>
+<script setup>
+import BaseLayout from './layouts/BaseLayout.vue'
+</script>
 
 <template>
-  <h1>test vue project</h1>
+  <BaseLayout>
+    <template #content>
+      <router-view />
+    </template>
+  </BaseLayout>
 </template>
