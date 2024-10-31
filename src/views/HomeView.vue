@@ -1,7 +1,11 @@
-<script setup></script>
+<script setup>
+import OptionsPanel from '@/components/view/home/OptionsPanel.vue'
+</script>
 
 <template>
-  <h1 class="capitalize text-blue-500">hello this is home page</h1>
+  <div class="text-sm text-dark-blue-text dark:text-white">
+    <OptionsPanel />
+  </div>
 </template>
 
 <style></style>

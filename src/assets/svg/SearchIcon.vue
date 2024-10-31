@@ -11,6 +11,7 @@
       stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
+      stroke-width="2"
       transform="translate(3 3)"
     >
       <circle cx="5.5" cy="5.5" r="5" />
