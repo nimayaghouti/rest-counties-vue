@@ -7,7 +7,7 @@ const { isDarkTheme, toggleDarkMode } = useTheme()
 </script>
 <template>
   <header
-    class="h-20 shadow fixed top-0 left-0 right-0 px-4 sm:px-20 bg-white text-dark-blue-text dark:bg-dark-blue dark:text-white"
+    class="h-20 shadow fixed top-0 left-0 right-0 z-10 px-4 sm:px-20 bg-white text-dark-blue-text dark:bg-dark-blue dark:text-white"
   >
     <div
       class="h-full w-full max-w-[1440px] mx-auto flex justify-between items-center"
