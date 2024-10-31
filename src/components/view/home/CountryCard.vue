@@ -9,7 +9,7 @@ defineProps({
 <template>
   <router-link :to="`/detail/${countryData.cca3}`">
     <div
-      class="max-w-72 h-[22rem] w-full bg-white dark:bg-dark-blue rounded-md shadow overflow-hidden"
+      class="max-w-72 h-[22rem] w-full bg-white dark:bg-dark-blue rounded-md shadow-md overflow-hidden"
     >
       <div class="h-[45%]">
         <img
