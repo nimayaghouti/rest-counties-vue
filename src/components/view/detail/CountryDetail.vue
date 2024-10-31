@@ -36,50 +36,50 @@ const languagesNames = computed(() => {
       />
     </div>
     <div class="w-[45%] min-w-80 h-[40vh] max-sm:h-[20vh] py-16">
-      <h3 class="font-bold text-2xl mb-4">{{ countryData.name.common }}</h3>
+      <h3 class="font-bold text-3xl mb-4">{{ countryData.name.common }}</h3>
       <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div class="space-y-4">
           <p class="space-x-1">
-            <span class="font-bold">Native Name:</span>
+            <span class="font-semibold">Native Name:</span>
             <span class="font-light">{{ nativeCommonName }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Population:</span>
+            <span class="font-semibold">Population:</span>
             <span class="font-light">{{
               countryData.population.toLocaleString()
             }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Region:</span>
+            <span class="font-semibold">Region:</span>
             <span class="font-light">{{ countryData.region }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Sub Region:</span>
+            <span class="font-semibold">Sub Region:</span>
             <span class="font-light">{{ countryData.subregion }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Capital:</span>
+            <span class="font-semibold">Capital:</span>
             <span class="font-light">{{ countryData?.capital?.[0] }}</span>
           </p>
         </div>
 
         <div class="space-y-4">
           <p class="space-x-1">
-            <span class="font-bold">Top Level Domain:</span>
+            <span class="font-semibold">Top Level Domain:</span>
             <span class="font-light">{{ countryData.tld?.[0] }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Currencies:</span>
+            <span class="font-semibold">Currencies:</span>
             <span class="font-light">{{ currencyNames }}</span>
           </p>
           <p class="space-x-1">
-            <span class="font-bold">Languages:</span>
+            <span class="font-semibold">Languages:</span>
             <span class="font-light">{{ languagesNames }}</span>
           </p>
         </div>
 
         <div class="flex flex-wrap items-center col-span-1 sm:col-span-2 gap-2">
-          <p class="font-bold">Border Countries:</p>
+          <p class="font-semibold">Border Countries:</p>
           <template v-if="countryData.borders">
             <router-link
               v-for="(border, index) in countryData.borders"
