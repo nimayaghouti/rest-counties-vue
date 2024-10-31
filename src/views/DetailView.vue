@@ -1,8 +1,28 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { getCountryService } from '@/services/getCountryService'
+const countryData = ref(null)
+
+const route = useRoute()
+
+onMounted(async () => {
+  try {
+    countryData.value = await getCountryService(route.params.cca3)
+    console.log(countryData.value)
+  } catch (error) {
+    console.error(error)
+  }
+})
+</script>
 
 <template>
-  <h1 class="capitalize text-red-500">hello this is detail page</h1>
-  <h1>{{ $route.params.cca3 }}</h1>
+  <div class="text-base">
+    <template v-if="countryData">
+      {{ countryData }}
+    </template>
+    <p v-else>Not Found.</p>
+  </div>
 </template>
 
 <style></style>

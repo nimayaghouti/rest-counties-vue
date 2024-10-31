@@ -15,14 +15,14 @@ const searchKey = ref('')
       <input
         v-model="searchKey"
         @change="console.log(searchKey)"
-        class="rounded h-16 pl-16 w-full shadow outline-none bg-white dark:bg-dark-blue"
+        class="rounded h-16 pl-16 w-full shadow-md outline-none bg-white dark:bg-dark-blue"
         type="text"
         placeholder="Search for a country..."
       />
     </div>
     <div class="relative max-w-48 w-full">
       <select
-        class="appearance-none rounded h-16 shadow outline-none bg-white dark:bg-dark-blue w-full px-4 pr-10 cursor-pointer"
+        class="appearance-none rounded h-16 shadow-md outline-none bg-white dark:bg-dark-blue w-full px-4 pr-10 cursor-pointer"
         v-model="filterKey"
       >
         <option value="Filter by Region">Filter by Region</option>
