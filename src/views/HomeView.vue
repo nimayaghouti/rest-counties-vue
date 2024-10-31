@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { getCountriesService } from '@/services/getCountriesService'
 import OptionsPanel from '@/components/view/home/OptionsPanel.vue'
+import CoutriesContainer from '@/components/view/home/CoutriesContainer.vue'
 
 const countriesData = ref([])
 
@@ -18,9 +19,7 @@ onMounted(async () => {
 <template>
   <div class="text-sm text-dark-blue-text dark:text-white">
     <OptionsPanel />
-    <div v-for="(countryData, index) in countriesData" :key="index">
-      <p>{{ countryData.name.common }}</p>
-    </div>
+    <CoutriesContainer :countriesData="countriesData" />
   </div>
 </template>
 
