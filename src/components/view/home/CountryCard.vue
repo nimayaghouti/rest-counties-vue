@@ -32,7 +32,7 @@ defineProps({
         </p>
         <p class="space-x-1">
           <span class="font-bold">Capital:</span>
-          <span class="font-light">{{ countryData.capital[0] }}</span>
+          <span class="font-light">{{ countryData?.capital?.[0] }}</span>
         </p>
       </div>
     </div>
