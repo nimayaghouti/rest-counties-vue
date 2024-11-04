@@ -2,11 +2,13 @@
 import { ref, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { getCountryService } from '@/services/getCountryService'
+import useLoading from '@/composable/useLoading'
 import CountryDetail from '@/components/view/detail/CountryDetail.vue'
 import LeftArrowIcon from '@/assets/svg/LeftArrowIcon.vue'
 
 const countryData = ref(null)
 const route = useRoute()
+const { isLoading } = useLoading()
 
 const fetchCountryData = async () => {
   try {
@@ -31,7 +33,8 @@ watch(() => route.params.cca3, fetchCountryData)
       <LeftArrowIcon class="w-4 h-4" />
       Back
     </button>
-    <template v-if="countryData">
+    <p v-if="isLoading">Loading...</p>
+    <template v-else-if="countryData">
       <CountryDetail :countryData="countryData" />
     </template>
     <p v-else>Not Found.</p>

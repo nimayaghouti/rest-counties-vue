@@ -1,12 +1,14 @@
 <script setup>
 import { onMounted, ref, computed } from 'vue'
 import { getCountriesService } from '@/services/getCountriesService'
+import useLoading from '@/composable/useLoading'
 import OptionsPanel from '@/components/view/home/OptionsPanel.vue'
 import CountriesContainer from '@/components/view/home/CountriesContainer.vue'
 
 const countriesData = ref([])
 const filterKey = ref('Filter by Region')
 const searchKey = ref('')
+const { isLoading } = useLoading()
 
 onMounted(async () => {
   try {
@@ -32,6 +34,9 @@ const filteredCountries = computed(() => {
 <template>
   <div class="text-sm text-dark-blue-text dark:text-white">
     <OptionsPanel v-model:filterKey="filterKey" v-model:searchKey="searchKey" />
-    <CountriesContainer :countriesData="filteredCountries" />
+    <CountriesContainer
+      :countriesData="filteredCountries"
+      :isLoading="isLoading"
+    />
   </div>
 </template>
