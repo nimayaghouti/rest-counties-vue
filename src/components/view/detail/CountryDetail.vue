@@ -35,7 +35,7 @@ const languagesNames = computed(() => {
         alt=""
       />
     </div>
-    <div class="w-[45%] min-w-80 h-[40vh] max-sm:h-[20vh] py-16">
+    <div class="w-[45%] min-w-80 py-16">
       <h3 class="font-bold text-3xl mb-4">{{ countryData.name.common }}</h3>
       <div class="h-full grid grid-cols-1 sm:grid-cols-2 gap-8">
         <div class="space-y-4">
