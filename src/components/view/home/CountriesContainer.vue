@@ -23,7 +23,7 @@ defineProps({
         :countryData="countryData"
       />
     </template>
-    <p v-else>Failed to fetchin data.</p>
+    <p v-else>Not Found.</p>
   </section>
 </template>
 
